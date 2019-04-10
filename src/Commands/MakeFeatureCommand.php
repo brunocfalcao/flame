@@ -74,7 +74,7 @@ class MakeFeatureCommand extends Command
         $this->info('*** Waygou Flame - Create Feature ***');
         $this->info('');
 
-        if (!file_exists(config_path('flame.php'))) {
+        if (! file_exists(config_path('flame.php'))) {
             return $this->error('flame.php configuration file not found. Please publish it first via php artisan vendor:publish --tag=flame-configuration');
         }
 
