@@ -70,15 +70,19 @@ class MakeFeatureCommand extends Command
      */
     public function handle()
     {
+        $this->info('');
+        $this->info('*** Waygou Flame - Create Feature ***');
+        $this->info('');
+
+        if (!file_exists(config_path('flame.php'))) {
+            return $this->error('flame.php configuration file not found. Please publish it first via php artisan vendor:publish --tag=flame-configuration');
+        }
+
         $namespaceGroups = collect(array_keys(config('flame.groups')));
 
         $namespaceGroups->transform(function ($item) {
             return $item.' ('.config("flame.groups.{$item}.namespace").')';
         });
-
-        $this->info('');
-        $this->info('*** Waygou Flame - Create Feature ***');
-        $this->info('');
 
         $hint = $this->choice('What is the Flame namespace group you want to use?', $namespaceGroups->toArray());
         // Compute $hint string.
