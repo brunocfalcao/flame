@@ -1,0 +1,59 @@
+{
+    "name": "brunocfalcao/flame",
+    "description": "Flame - A feature-driven development (FDD) UI framework for your Laravel applications",
+    "type": "library",
+    "keywords": [
+        "flame",
+        "brunocfalcao"
+        "laravel",
+        "fdd",
+        "framework",
+        "php"
+    ],
+    "homepage": "https://github.com/brunocfalcao/flame",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Falcao",
+            "email": "bruno.c.falcao@brunofalcao.me",
+            "homepage": "https://www.brunofalcao.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "~5.8.0",
+        "brunocfalcao/helpers": "^0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brunocfalcao\\Flame\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brunocfalcao\\Flame\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brunocfalcao\\Flame\\FlameServiceProvider"
+            ]
+        }
+    }
+}

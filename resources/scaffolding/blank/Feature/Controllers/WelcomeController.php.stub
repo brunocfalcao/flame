@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Http\Controllers\Controller;
+
+class WelcomeController extends Controller
+{
+    public function {{action}}()
+    {
+        return ['text' => 'Hi there! This is a Twinkle!'];
+    }
+}
