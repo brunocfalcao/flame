@@ -1,4 +1,4 @@
-<p align="center"><img src="https://flame.waygou.com/assets/logos/logo-deploy.jpg" width="150"></p>
+<p align="center"><img src="https://flame.brunofalcao.me/assets/logos/logo-deploy.jpg" width="150"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/brunocfalcao/flame"><img src="https://travis-ci.org/brunocfalcao/flame.svg" alt="Build Status"></a>
@@ -148,7 +148,7 @@ dynamically injected into your method arguments!
 ## Getting started
 
 Flame creates a demo route on your /flame url. You can try it and should see:
-<p align="center"><img src="https://flame.waygou.com/assets/github/preview.jpg" width="400"></p>
+<p align="center"><img src="https://flame.brunofalcao.me/assets/github/preview.jpg" width="400"></p>
 
 This means that you have can see the Demo feature located in the Brunocfalcao\Flame\Features\Demo namespace.
 
