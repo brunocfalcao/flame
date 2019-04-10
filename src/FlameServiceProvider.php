@@ -41,7 +41,7 @@ class FlameServiceProvider extends BaseServiceProvider
         Blade::directive(
             'twinkle',
             function ($expression) {
-                return "<?php echo (new \\Waygou\\Flame\\Blade\\Directives\\Twinkle($expression))->render() ?>";
+                return "<?php echo (new \\Brunocfalcao\\Flame\\Blade\\Directives\\Twinkle($expression))->render() ?>";
             }
         );
     }

@@ -102,7 +102,7 @@
                 </div>
                 <div class="m-b-md content m-t-30">
                     <p><strong class="f-s-11">Open-source package made with <i class="fas fa-heart color-laravel"></i></strong></p>
-                    <p>By <strong class="f-s-11"><a class="link" href="https://www.waygou.com" target="_blank">Waygou</a></strong></p>
+                    <p>By <strong class="f-s-11"><a class="link" href="https://www.brunofalcao.me" target="_blank">Bruno Falcao</a></strong></p>
                 </div>
             </div>
         </div>
