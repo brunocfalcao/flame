@@ -23,7 +23,7 @@
     "require": {
         "php": "^7.2",
         "illuminate/support": "~5.8.0",
-        "brunocfalcao/helpers": "*"
+        "brunocfalcao/helpers": "^0.1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0"
