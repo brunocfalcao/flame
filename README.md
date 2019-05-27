@@ -22,7 +22,7 @@ This free package will allow you to:
 
 ## Why Flame
 
-I've built Flame because I was starting to have medium size web apps (like [Waygou](https://www.waygou.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, Blade Components, etc.
+I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, Blade Components, etc.
 It was starting to be difficult to organize my features in a way that I could load data inside those views given for the respective controller action that I was running at a certain moment.
 
 > A thought came to me: "What if I have a way to know automatically what actions am I running and then automatically load my graphical
