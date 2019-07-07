@@ -49,6 +49,7 @@ class Twinkle extends TwinkleRenderer implements Renderable
         $this->intermediatePath = $this->getIntermediatePath($this->hint);
         $this->action = $this->getActionMethod();
         $this->view = $this->findView();
+
         $this->enrichData();
     }
 

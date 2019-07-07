@@ -54,7 +54,7 @@ class Twinkle extends Renderer
                           '\\'.
                           str_replace('.', '\\', $this->intermediatePath).
                           '\\Controllers\\'.
-                          studly_case($this->name).
+                          studly_case(last(explode('.', $this->name))).
                           'Controller';
 
         // Identify controller action: current action or 'default'.
