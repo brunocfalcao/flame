@@ -2,10 +2,10 @@
 
 namespace Brunocfalcao\Flame\Renderers;
 
-use Brunocfalcao\Flame\Exceptions\FlameException;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Database\Eloquent\Model;
+use Brunocfalcao\Flame\Exceptions\FlameException;
 
 class Twinkle extends Renderer
 {
@@ -96,7 +96,6 @@ class Twinkle extends Renderer
                      * In case the $class is instance of Model, then retrieve the model instance.
                      * Difference is, in case it doesn't exist it will throw an error.
                      */
-
                     if (is_subclass_of($class, 'Illuminate\Database\Eloquent\Model')) {
                         // A Model class is present. Let's cross check the parameter
                         // with the route bindings.
