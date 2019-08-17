@@ -13,16 +13,7 @@ return [
                 'namespace' => '<your feature namespace root>',
                 'path' => '<the physical path to your feature namespace root>'
             ]
-
-            As the one specified:
-            'demo' => [
-                'namespace' => 'Brunocfalcao\Flame\Features',
-                'path'      => base_path('vendor/brunocfalcao/flame/src/Features')
-            ]
-
-            Means that Flame will autoload the demo namespace group, and load features from the
-            namespace defined in that path.
-            */
+        */
 
         'demo' => [
             'namespace' => 'Brunocfalcao\Flame\Features',
@@ -36,6 +27,8 @@ return [
 
             You need to replace the path by a specific string, function or
             an invokable class (__invoke()).
+            E.g.:
+            'path'      => FlamePathFinder::class,
         */
         'flame' => [
             'namespace' => 'Your\Application\Features',

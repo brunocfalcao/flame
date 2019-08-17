@@ -2,9 +2,10 @@
 
 namespace Brunocfalcao\Flame\Renderers;
 
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Route;
 use Brunocfalcao\Flame\Exceptions\FlameException;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 
 class Twinkle extends Renderer
 {
@@ -77,7 +78,7 @@ class Twinkle extends Renderer
             $arguments['request'] = request();
         }
 
-        // Verify if there are extra parameters in the method that need depedency injection.
+        // Verify if there are extra parameters in the method that need dependency injection.
         $ref = new \ReflectionMethod($namespace, $action);
 
         //dd($ref, $router->getCurrentRoute()->parameters);
@@ -86,7 +87,38 @@ class Twinkle extends Renderer
         if (count($ref->getParameters()) > 0) {
             foreach ($ref->getParameters() as $data) {
                 if (! is_null($data->getType())) {
-                    $extraArguments[$data->getName()] = app()->make((string) $data->getType());
+                    // Extract both Class and variable from the namedType object ($data)
+                    $parameter = $data->getName();
+                    $class = $data->getType()->getName();
+
+                    /**
+                     * Elaborate an implicit binding.
+                     * In case the $class is instance of Model, then retrieve the model instance.
+                     * Difference is, in case it doesn't exist it will throw an error.
+                     */
+
+                    if (is_subclass_of($class, 'Illuminate\Database\Eloquent\Model')) {
+                        // A Model class is present. Let's cross check the parameter
+                        // with the route bindings.
+                        $routeParameters = $router->getCurrentRoute()->parameters;
+
+                        if (array_key_exists($parameter, $routeParameters)) {
+                            /**
+                             * We do have a route parameter that is equal to our
+                             * controller function parameter. Time to obtain the model
+                             * instance!
+                             * 1. Get route parameter value (our model route key value).
+                             * 2. Get route key name from the model.
+                             * 3. Query the DB to get the Model with that key name.
+                             */
+                            $modelValue = $routeParameters[$parameter];
+                            $routeKey = (new $class)->getRouteKeyName();
+                            $modelInstance = $class::where($routeKey, $modelValue)->firstOrFail();
+                            $extraArguments[$parameter] = $modelInstance;
+                        }
+                    } else {
+                        $extraArguments[$parameter] = app()->make($class);
+                    }
                 }
             }
         }
