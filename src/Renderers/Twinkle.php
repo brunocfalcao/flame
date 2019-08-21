@@ -109,12 +109,10 @@ class Twinkle extends Renderer
                              * 1. Get route parameter value (our model route key value).
                              * 2. Get route key name from the model.
                              * 3. Query the DB to get the Model with that key name.
-                             *
                              */
-
                             $modelValue = $routeParameters[$parameter];
 
-                            /**
+                            /*
                              * In case the parent controller in the flame already uses implicit
                              * route binding, then the parameters that arrive to the twinkle will
                              * already be model objects and not string values. Let's check that...
