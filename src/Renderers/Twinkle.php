@@ -2,10 +2,10 @@
 
 namespace Brunocfalcao\Flame\Renderers;
 
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Database\Eloquent\Model;
 use Brunocfalcao\Flame\Exceptions\FlameException;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 
 class Twinkle extends Renderer
 {

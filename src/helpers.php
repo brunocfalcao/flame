@@ -1,7 +1,7 @@
 <?php
 
-use Brunocfalcao\Flame\Renderers\Panel;
 use Brunocfalcao\Flame\Exceptions\FlameException;
+use Brunocfalcao\Flame\Renderers\Panel;
 
 function flame(...$args)
 {

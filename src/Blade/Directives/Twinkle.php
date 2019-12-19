@@ -2,9 +2,9 @@
 
 namespace Brunocfalcao\Flame\Blade\Directives;
 
-use Illuminate\Support\Facades\View;
-use Illuminate\Contracts\Support\Renderable;
 use Brunocfalcao\Flame\Renderers\Twinkle as TwinkleRenderer;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Support\Facades\View;
 
 class Twinkle extends TwinkleRenderer implements Renderable
 {

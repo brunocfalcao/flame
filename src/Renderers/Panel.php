@@ -2,9 +2,9 @@
 
 namespace Brunocfalcao\Flame\Renderers;
 
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Route;
 use Brunocfalcao\Flame\Exceptions\FlameException;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 
 class Panel extends Renderer
 {
