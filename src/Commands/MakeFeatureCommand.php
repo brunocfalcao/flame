@@ -131,9 +131,9 @@ class MakeFeatureCommand extends Command
 
         // Show table to confirm configuration data.
         $this->table($this->headersConfirmation, [['Namespace Group', $this->group, 'Your Flame namespace group, as in your flame.php configuration.'],
-                                                  ['Feature Name', $this->feature, 'Your feature name (directory), in studly case.'],
-                                                  ['Base path', $this->basePath, 'File path where your new feature will be created.'],
-                                                  ['Default action', $this->action, 'The action method name that will be created inside your feature.'], ]);
+            ['Feature Name', $this->feature, 'Your feature name (directory), in studly case.'],
+            ['Base path', $this->basePath, 'File path where your new feature will be created.'],
+            ['Default action', $this->action, 'The action method name that will be created inside your feature.'], ]);
 
         if ($this->confirm('Do you wish to continue?', true)) {
             // Check feature directory.
@@ -279,8 +279,8 @@ class MakeFeatureCommand extends Command
     protected function makeFeatureDirectories()
     {
         File::makeDirectories([$this->basePath.'/'.$this->feature,
-                               $this->basePath.'/'.$this->feature.'/Twinkles',
-                               $this->basePath.'/'.$this->feature.'/Panels',
-                               $this->basePath.'/'.$this->feature.'/Controllers', ]);
+            $this->basePath.'/'.$this->feature.'/Twinkles',
+            $this->basePath.'/'.$this->feature.'/Panels',
+            $this->basePath.'/'.$this->feature.'/Controllers', ]);
     }
 }
