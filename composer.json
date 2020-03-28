@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": "^7.2",
-        "illuminate/support": "^5.8.15|^6.0|^7.0",
+        "illuminate/support": "^5.8.15||^6.0||^7.0",
         "brunocfalcao/helpers": "*",
         "laravel/helpers": "*"
     },
