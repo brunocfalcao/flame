@@ -25,4 +25,9 @@ class FlameException extends Exception
     {
         return new static(sprintf('Configuration key %s invalid, null or inexistent. Please check your flame.php configuration file', $path));
     }
+
+    public static function configurationPathFinderNotFound($class)
+    {
+        return new static(sprintf('Path Finder Class not found - %s', $class));
+    }
 }

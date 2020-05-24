@@ -19,6 +19,8 @@ function group_absolute_path($namespaceGroup)
 
     if (class_exists($value)) {
         $value = app($value)();
+    } else {
+        throw FlameException::configurationPathFinderNotFound($value);
     }
 
     return $value;
