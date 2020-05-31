@@ -1,4 +1,4 @@
-<p align="center"><img src="https://flame.brunofalcao.me/assets/logos/logo-deploy.jpg" width="150"></p>
+<p align="center"><img src="https://assets.waygou.com/flame-github-header.jpg" width="180"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/brunocfalcao/flame"><img src="https://travis-ci.org/brunocfalcao/flame.svg" alt="Build Status"></a>
