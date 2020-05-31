@@ -2,7 +2,6 @@
 
 <p align="center">
 <a href="https://travis-ci.org/brunocfalcao/flame"><img src="https://travis-ci.org/brunocfalcao/flame.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/brunocfalcao/flame"><img src="https://poser.pugx.org/brunocfalcao/flame/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/brunocfalcao/flame"><img src="https://poser.pugx.org/brunocfalcao/flame/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/brunocfalcao/flame"><img src="https://poser.pugx.org/brunocfalcao/flame/license.svg" alt="License"></a>
 <a href="https://github.styleci.io/repos/145177976"><img src="https://github.styleci.io/repos/145177976/shield" alt="Style CI"></a>
