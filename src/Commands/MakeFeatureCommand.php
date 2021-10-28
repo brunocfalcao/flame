@@ -169,8 +169,9 @@ class MakeFeatureCommand extends Command
 
     /**
      * Iterate the base path (invokable, or string?).
-     * @param  string $configPath The flame configuration path.
-     * @return string             The path.
+     *
+     * @param  string  $configPath  The flame configuration path.
+     * @return string The path.
      */
     protected function iteratePath($configPath)
     {
@@ -258,11 +259,10 @@ class MakeFeatureCommand extends Command
      * Parses the original file with the respective replacement pairs, and
      * creates the destination file with everything replaced.
      *
-     * @param string $origin       The original file path.
-     * @param string $destination  The destination file path.
-     * @param array  $translations The keys to translate: {{example}}.
-     * @param array  $conversions  The the converted values.
-     *
+     * @param  string  $origin  The original file path.
+     * @param  string  $destination  The destination file path.
+     * @param  array  $translations  The keys to translate: {{example}}.
+     * @param  array  $conversions  The the converted values.
      * @return void
      */
     protected function parseFile(string $origin, string $destination, array $translations = [], array $conversions = [])
