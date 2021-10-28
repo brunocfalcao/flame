@@ -21,7 +21,7 @@
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
+        "php": "^7.0|^8.0",
         "illuminate/support": "^7.0|^8.0",
         "brunocfalcao/helpers": "^1.0",
         "laravel/helpers": "^1.0"
