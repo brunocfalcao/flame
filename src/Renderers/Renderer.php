@@ -26,9 +26,9 @@ class Renderer
      * Computes the View hint based in the Controller namespace and the
      * Flame configuration.
      *
-     * @throws Brunocfalcao\Flame\Exceptions\FlameException
-     *
      * @return string View hint.
+     *
+     * @throws Brunocfalcao\Flame\Exceptions\FlameException
      */
     protected function getHint()
     {
@@ -64,8 +64,7 @@ class Renderer
     /**
      * Resolves the view intermediate path.
      *
-     * @param string $hint View hint (=the flame group key).
-     *
+     * @param  string  $hint  View hint (=the flame group key).
      * @return string Intermediate path already with '.' separations.
      */
     protected function getIntermediatePath($hint)
