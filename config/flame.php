@@ -17,7 +17,7 @@ return [
 
         'demo' => [
             'namespace' => 'Brunocfalcao\Flame\Features',
-            'path'      => FlamePathFinder::class,
+            'path' => FlamePathFinder::class,
         ],
 
         /* Suggested namespace group for your Laravel app.
@@ -32,7 +32,7 @@ return [
         */
         'flame' => [
             'namespace' => 'Your\Application\Features',
-            'path'      => null,
+            'path' => null,
         ],
         /*****/
     ],
